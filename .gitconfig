@@ -1,0 +1,36 @@
+[user]
+  name = Luis Emilio Velasco Sánchez
+  email = emibloque@gmail.com
+  signingkey = 3920ED6E5C0CFCD5
+
+[core]
+  editor = nano
+  excludesfile = /Users/emiliovelasco/.gitignore_global
+
+[color]
+  ui = auto
+
+[alias]
+  co = checkout
+  st = status -s
+  ls = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]\\ %C(green)%G?" --decorate --date=relative
+  porsi = diff --cached --color-words
+  remove-merged = !git branch --merged | grep -v \"\\*\" | grep -v master | grep -v dev | xargs -n 1 git branch -d
+
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+  rebase = true
+  mergeoptions = --no-ff
+
+[branch "staging"]
+  mergeoptions = --no-ff
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[gpg]
+  program = gpg

@@ -4,3 +4,7 @@
 
 # ZSH
 !.zshrc
+
+
+# Git
+!.gitconfig
