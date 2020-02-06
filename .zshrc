@@ -111,3 +111,5 @@ if [ -f '/Users/emiliovelasco/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/e
 if [ -f '/Users/emiliovelasco/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/emiliovelasco/google-cloud-sdk/completion.zsh.inc'; fi
 
 export GPG_TTY=$(tty)
+
+. ~/.asdf/plugins/java/set-java-home.sh
