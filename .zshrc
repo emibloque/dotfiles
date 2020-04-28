@@ -113,3 +113,7 @@ if [ -f '/Users/emiliovelasco/google-cloud-sdk/completion.zsh.inc' ]; then . '/U
 export GPG_TTY=$(tty)
 
 . ~/.asdf/plugins/java/set-java-home.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/emiliovelasco/.sdkman"
+[[ -s "/Users/emiliovelasco/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/emiliovelasco/.sdkman/bin/sdkman-init.sh"
